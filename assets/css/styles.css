@@ -1,0 +1,44 @@
+body {
+    background-color: #f3f4f6;
+  }
+
+  .bell-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+  }
+  
+  .bell-icon {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  /* Bell Animation */
+  @keyframes ring {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-15deg); }
+    20% { transform: rotate(15deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform: rotate(-5deg); }
+    60% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .animate-bell {
+    animation: ring 0.8s ease-in-out infinite;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+    20%, 40%, 60%, 80% { transform: rotate(10deg); }
+  }
+  
+  .animate-shake {
+    animation: shake 0.8s ease-in-out infinite;
+  }
